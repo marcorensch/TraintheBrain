@@ -1,0 +1,393 @@
+
+.stage, .root{
+    -fx-background-color: #171616;
+    -fx-font-family: "Arial";
+}
+
+.text {
+    -fx-text-fill: #bdbdbd;
+    -fx-fill: #bdbdbd;
+}
+.text.answerText{
+    -fx-wrap-text: break-word;
+}
+
+.text.text-success{
+    -fx-text-fill: #209318;
+    -fx-fill: #209318;
+}
+
+.text.meta{
+    -fx-text-fill: rgba(189, 189, 189, 0.5);
+    -fx-fill: rgba(189, 189, 189, 0.5);
+    -fx-font-size: 10px;
+}
+
+.text-error {
+    -fx-font-weight: bold;
+    -fx-fill: #c20202;
+}
+
+.lead {
+    -fx-font-size: 1.5em;
+}
+
+.bold {
+    -fx-font-weight: bold;
+}
+
+.padding-small{
+    -fx-padding: 10px;
+}
+
+#mainHeader {
+    -fx-background-image: url('img/header.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center,bottom;
+    -fx-background-repeat: no-repeat;
+}
+
+/*#mainTitle{*/
+/*    -fx-font-size: 3em;*/
+/*    -fx-fill: #bdbdbd;*/
+/*}*/
+
+/* Buttons */
+
+.btn{
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+}
+
+.btn-default {
+    -fx-background-color: #262626;
+    -fx-border-color: #313131;
+}
+
+.border-remove{
+    -fx-border-width: 0;
+}
+
+.btn-default .text {
+    -fx-fill: #c2c2c2;
+}
+
+.btn-default:hover {
+    -fx-background-color: #3d3d3d;
+
+}
+
+.btn-default:hover .text{
+    -fx-fill: #fafafa;
+}
+
+
+.btn-primary{
+    -fx-background-color: #15447a;
+    -fx-border-color: #186493;
+
+}
+
+.btn-primary:hover{
+    -fx-background-color: #184e8c;
+    -fx-border-color: #186798;
+}
+
+.btn-success{
+    -fx-background-color: #1c7a15;
+    -fx-border-color: #209318;
+
+}
+
+.btn-success:hover{
+    -fx-background-color: #208f18;
+    -fx-border-color: #22a219;
+}
+
+.btn-danger{
+    -fx-background-color: transparent;
+    -fx-border-color: #4d0605;
+
+}
+
+.btn-danger:hover{
+    -fx-background-color: rgba(121, 11, 9, 0.1);
+    -fx-border-color: #6b0907;
+}
+
+.btn-danger .text{
+    -fx-fill: #831a17;
+}
+
+.btn-success .text,
+.btn-primary .text {
+    -fx-fill: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.btn-success:hover .text {
+    -fx-fill: rgba(255, 255, 255, 0.9);
+}
+
+.button.medium {
+    -fx-padding: 7px 20px;
+    -fx-font-size: 1.1em;
+}
+
+.button.large {
+    -fx-padding: 20px;
+    -fx-font-size: 2.5em;
+}
+
+.mainButton{
+    -fx-font-size: 1.5em;
+    -fx-padding: 20px 30px;
+}
+
+
+/* SubSites */
+
+#header {
+    -fx-background-image: url('img/subheader.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center,bottom;
+    -fx-background-repeat: no-repeat;
+}
+#subTitleTtB{
+    -fx-font-size: 2em;
+    -fx-font-family: "Arial";
+    -fx-fill: #efefef;
+}
+
+.subTitle{
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-fill: #e1e1e1;
+}
+.answerBox {
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-background-color: rgba(35, 35, 35, 0.71);
+    -fx-border-color: #101010;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+}
+
+.answerBox.selected {
+    -fx-background-color: rgba(21, 68, 122, 0.9);
+    -fx-border-color: #186798;
+}
+
+.answerBox.false {
+    -fx-background-color: rgba(122, 21, 21, 0.9);
+    -fx-border-color: #981818;
+}
+
+.answerBox.false-selected {
+    -fx-background-color: rgba(122, 21, 21, 0.9);
+    -fx-border-color: #186798;
+}
+
+.answerBox.correct {
+    -fx-background-color: rgba(21, 122, 34, 0.9);
+    -fx-border-color: #189823;
+}
+
+.answerNum{
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 8em;
+    -fx-fill: rgba(255,255,255, 0.02);
+}
+
+/* Question Edit Overview */
+
+.delete-icon {
+    -fx-background-image: url('img/trash_icon_white_128.png');
+    -fx-min-height: 16.0;
+    -fx-min-width: 16.0;
+    -fx-background-size: contain;
+    -fx-background-position: center,center;
+    -fx-background-repeat: no-repeat;
+    -fx-cursor: hand;
+}
+
+.delete-icon:hover {
+    -fx-background-image: url('img/trash_icon_red_128.png');
+    -fx-cursor: hand;
+}
+
+
+
+/* Question Edit */
+.editListQuestionOutterContainer{
+    -fx-padding: 3px 0 3px 0;
+}
+
+.editListQuestionContainer{
+    -fx-background-color: #262626;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+    -fx-border-color: #2c2c2c;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+}
+
+.editListQuestionContainer:hover {
+    -fx-background-color: #3d3d3d;
+    -fx-border-color: #464646;
+}
+
+.editListQuestionContainer .editListQuestionText {
+    -fx-fill: #eee;
+}
+
+.label {
+    -fx-text-fill: #ececec;
+    -fx-fill: #ececec;
+}
+
+.check-box{
+    -fx-text-fill: #ececec;
+    -fx-fill: #ececec;
+    -fx-padding: 10px 5px;
+    -fx-cursor: hand;
+}
+
+.check-box .box {
+    -fx-background-color: #171616;
+    -fx-border-color: #2d2d2d;
+}
+
+.text-field {
+
+}
+
+.text-field.tfprimary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4b4b4b;
+    -fx-padding: 10px 20px;
+    -fx-border-width: 1px;
+    -fx-border-color: transparent transparent #2d2d2d transparent ;
+    -fx-border-style: solid;
+    -fx-alignment: center;
+    -fx-font-size: 3em;
+}
+
+.text-field.tfprimary:focused {
+    -fx-text-fill: #676767;
+    -fx-border-color: transparent transparent #676767 transparent ;
+}
+
+/* Text Area */
+.text-area{
+    -fx-background-color: rgba(255,255,255, .01);
+    -fx-text-fill: #d0d0d0;
+    -fx-border-color: #252525;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.text-area.answerTextArea {
+    -fx-min-height: 80px;
+}
+
+.text-area:focused{
+    -fx-background-color: rgba(255,255,255, .05);
+    -fx-text-fill: #efefef;
+    -fx-border-color: #424242;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+#questionText.text-area{
+    -fx-font-size: 1.2em;
+}
+
+.icon-selection{
+    -fx-font-size: 30px;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
+.errorBox{
+    -fx-background-color: rgba(98, 0, 0, 0.55);
+    -fx-background-radius: 3px;
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(98, 0, 0, 0.8);
+}
+
+.errorBox .errtitle{
+    -fx-fill: rgba(255, 255, 255, 0.9);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+
+.errorBox .errtext{
+    -fx-fill: rgba(255, 255, 255, 0.8);
+}
+
+.errorBox .errdesc{
+    -fx-fill: rgba(255, 255, 255, 0.8);
+    -fx-font-family: monospace;
+}
+
+/* Chart Data */
+.chart-pie {
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+
+.chart-legend {
+    -fx-background-color: rgba(0, 0, 0, 0.85);
+    -fx-stroke: #fff;
+}
+
+.default-color0.chart-pie { -fx-pie-color: #207200; }
+.default-color1.chart-pie { -fx-pie-color: #440000; }

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<?import com.tbt.trainthebrain.AnswerBox?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="700" prefHeight="850.0" prefWidth="960.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tbt.trainthebrain.LearnmodeController">
+    <children>
+        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="header" alignment="BOTTOM_CENTER" prefHeight="246.0" prefWidth="960.0" VBox.vgrow="NEVER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="subTitle" text="Lernmodus" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="0.0" prefWidth="960.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="cancelLearnModeBtn" mnemonicParsing="false" onAction="#backToMainClicked" text="Abbrechen" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-default" />
+                     </styleClass>
+                     <graphic>
+                        <Glyph fontFamily="FontAwesome" fontSize="15.0" icon="TIMES_CIRCLE" />
+                     </graphic>
+                  </Button>
+                  <HBox alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="208.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Frage " />
+                        <Text fx:id="actualQuestionNum" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="#nActual" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="/" />
+                        <Text fx:id="questionCountText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="#nMax" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="learnModeInfoContainer" alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="960.0">
+                                 <children>
+                                    <Text fx:id="questionText" strokeType="OUTSIDE" strokeWidth="0.0" text="#Fragentext Wie ist die Frage die hier stehen soll?" textAlignment="CENTER" wrappingWidth="700.0">
+                                       <styleClass>
+                                          <String fx:value="text" />
+                                          <String fx:value="lead" />
+                                       </styleClass>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="370.0" prefWidth="960.0">
+                                 <children>
+                                    <AnchorPane prefHeight="415.0" prefWidth="960.0">
+                                       <children>
+                                          <GridPane fx:id="answersGrid" alignment="CENTER" hgap="14.0" layoutX="60.0" layoutY="60.0" prefHeight="385.0" prefWidth="880.0" vgap="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <AnswerBox fx:id="answerBox0" alignment="CENTER_LEFT" onMouseClicked="#clickedOnAnswer" spacing="10.0" styleClass="answerBox" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" translateX="10.0">
+                                                         <styleClass>
+                                                            <String fx:value="text" />
+                                                            <String fx:value="answerNum" />
+                                                            <String fx:value="answerText" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <Text fx:id="answer0" boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="Das ist ein Seeehr langer Text der hier steht und mir vermutlich Probleme macht mal schauen was nun dabei herauskommt wenn dieser Text nun sehr lange ist Das ist ein Seeehr langer Text der hier steht und mir vermutlich Probleme macht mal schauen was nun dabei herauskommt wenn dieser Text nun sehr lange ist Das ist ein Seeehr langer Text der hier steht und mir vermutlich Probleme macht mal schauen was nun dabei herauskommt wenn dieser Text nun sehr lange ist Das ist ein Seeehr langeei herausk ist" translateX="-40.0" wrappingWidth="330.0">
+                                                         <styleClass>
+                                                            <String fx:value="text" />
+                                                            <String fx:value="answerText" />
+                                                         </styleClass>
+                                                      </Text>
+                                                   </children>
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin>
+                                                </AnswerBox>
+                                                <AnswerBox fx:id="answerBox1" alignment="CENTER_LEFT" onMouseClicked="#clickedOnAnswer" spacing="10.0" styleClass="answerBox" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" translateX="10.0">
+                                                         <styleClass>
+                                                            <String fx:value="text" />
+                                                            <String fx:value="answerNum" />
+                                                            <String fx:value="answerText" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <Text fx:id="answer1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Text" translateX="-40.0" wrappingWidth="330.0" />
+                                                   </children>
+                                                </AnswerBox>
+                                                <AnswerBox fx:id="answerBox2" alignment="CENTER_LEFT" onMouseClicked="#clickedOnAnswer" spacing="10.0" styleClass="answerBox" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateX="10.0">
+                                                         <styleClass>
+                                                            <String fx:value="text" />
+                                                            <String fx:value="answerNum" />
+                                                            <String fx:value="answerText" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <Text fx:id="answer2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Text" translateX="-40.0" wrappingWidth="330.0" />
+                                                   </children>
+                                                </AnswerBox>
+                                                <AnswerBox fx:id="answerBox3" alignment="CENTER_LEFT" onMouseClicked="#clickedOnAnswer" spacing="10.0" styleClass="answerBox" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" translateX="10.0">
+                                                         <styleClass>
+                                                            <String fx:value="text" />
+                                                            <String fx:value="answerNum" />
+                                                            <String fx:value="answerText" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <Text fx:id="answer3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Text" translateX="-40.0" wrappingWidth="330.0" />
+                                                   </children>
+                                                </AnswerBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <StackPane alignment="BOTTOM_RIGHT" prefHeight="80.0" prefWidth="960.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Button fx:id="checkBtn" disable="true" mnemonicParsing="false" onAction="#checkAnswersClicked" prefHeight="90.0" prefWidth="180.0" text="Antwort prüfen">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-primary" />
+                              <String fx:value="medium" />
+                           </styleClass>
+                           <graphic>
+                              <Glyph fontFamily="FontAwesome" icon="CHECK" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="nextQuestBtn" mnemonicParsing="false" onAction="#switchQuestionClicked" prefHeight="90.0" prefWidth="180.0" text="Weiter" visible="false">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-success" />
+                              <String fx:value="medium" />
+                           </styleClass>
+                           <graphic>
+                              <Glyph fontFamily="FontAwesome" icon="CHEVRON_RIGHT" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="endcardBtn" mnemonicParsing="false" onAction="#goToEndScreenClicked" prefHeight="90.0" prefWidth="180.0" text="Abschliessen" visible="false">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-success" />
+                              <String fx:value="medium" />
+                           </styleClass>
+                           <graphic>
+                              <Glyph fontFamily="FontAwesome" icon="CHEVRON_RIGHT" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+        </VBox>
+    </children>
+</AnchorPane>
